@@ -1,0 +1,22 @@
+import math
+vart = float(input("ingrese tiempo en que tardó la onda en llegar= "))
+varti = float(input("ingrese tiempo en que tardó la segunda onda en llegar= "))
+varg = float(input("ingrese los grados del disparo= "))
+varg2 = float(input("ingrese los grados del segundo disparo= "))
+#aqui pasamos de radianes a grados
+x = math.radians(varg)
+x2 = math.radians(varg2)
+var = (300000)
+varhyp1 = (vart/2 * var)
+varhyp2 = (varti/2 * var)
+varcatetopuesto = (math.sin(x) * varhyp1)
+varcatetopuestoa = (math.sin(x2)* varhyp2)
+varcatetoadyacente = (varcatetopuesto / math.tan(x))
+varcatetoadyacentea = (varcatetopuestoa / math.tan(x2))
+varvel = (varcatetoadyacente - varcatetoadyacentea)
+
+print (f"la distancia es igual a {varcatetoadyacente}km")
+print (f"la distancia actual es {varcatetoadyacentea}km")
+print (f"la velocidad es igual a {varvel}km/s")
+print (f"la altura es igual a {varcatetopuesto}km")
+print (f"la hipotenusa es {varhyp1}km")
